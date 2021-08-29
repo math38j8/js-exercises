@@ -34,3 +34,14 @@ console.log(`The index of the first D in Dumbledore is at ${secondD}`);
 //5 
 let lastE = albus.lastIndexOf("e");
 console.log(`The index of the last e in Dumbledore is at ${lastE}`);
+
+//Trim method
+const str1 = "  There is        space here \n   ";
+const str2 = str1.trim();
+console.log(str2);
+
+//Method Parameters
+const fullName = "Peter Heornimous Lind";
+const firstName = fullName.substring(0,5);
+
+console.log(`firstname is: _${firstName}_`);
