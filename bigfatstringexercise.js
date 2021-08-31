@@ -2,6 +2,8 @@
 
 let inputValue;
 let result;
+let operator;
+let maskedNumber;
 
 window.addEventListener("DOMContentLoaded", start);
 document.querySelector("#clearresults").addEventListener("click", clearResults); //when clicked on clear go to clearResults
@@ -53,8 +55,22 @@ function correctOutput() {
         console.log(secondSpace);
     }else if (operator === "option5"){
         //If input is a filename: Check if a filename is .png or .jpg
-        
+        console.log(inputValue.endsWith('.jpg'));
+        if (inputValue.endsWith('.jpg')) {
+            result = `File name is a .jpg`;
+        } else if (inputValue.endsWith('.png')) {
+            result = `File name is a .png`;
+        } else {
+            result = `Input is not a file name`;
+        }
+    }else if (operator === "option6"){
+        //If input is a password: Hide a password with the correct number of *s
+        let password = inputValue.indexOf("");
+        result = inputValue.replaceAll(password, "*");
+        console.log(result); 
+        console.log(password);
 
+        
     } else  {
         //option8
         //With any input: Make a character uppercase, if it follows a space or a hyphen
