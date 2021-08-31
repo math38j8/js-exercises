@@ -1,0 +1,21 @@
+#output {
+  display: block;
+  width: 63vw;
+  height: 2vw;
+  border: 1px solid black;
+}
+
+#clearresults:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+* {
+  margin-top: 1vw;
+  margin-bottom 1vw;
+
+}
+
+input {
+  width:30vw;
+}
