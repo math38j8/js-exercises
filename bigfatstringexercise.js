@@ -4,6 +4,7 @@ let inputValue;
 let result;
 let operator;
 let maskedNumber;
+let trimmedfullinput;
 
 window.addEventListener("DOMContentLoaded", start);
 document.querySelector("#clearresults").addEventListener("click", clearResults); //when clicked on clear go to clearResults
@@ -65,17 +66,28 @@ function correctOutput() {
         }
     }else if (operator === "option6"){
         //If input is a password: Hide a password with the correct number of *s
-        let password = inputValue.indexOf("");
-        result = inputValue.replaceAll(password, "*");
-        console.log(result); 
-        console.log(password);
-
+        const inputlenght = inputValue.length;
+        const stars = inputValue.slice(inputlenght).padStart(inputlenght, "*");
+        result = stars;
         
-    } else  {
+    } else if (operator === "option7") {
+        //With any input: Make the third character uppercase
+        result = inputValue.substring(0,2) + inputValue[2].toUpperCase()+ inputValue.substring(3);
+
+    }else  {
         //option8
         //With any input: Make a character uppercase, if it follows a space or a hyphen
-        result = inputValue.split("-");
-        console.log("result",result);
+        const word = inputValue.split(/[- ]+/);
+        let fullinput = "";
+        word.forEach((element) => {
+        let firstletter = element.substring(0, 1);
+        let editfirst = firstletter.toUpperCase();
+        let rest = element.substring(1);
+        fullinput = fullinput + editfirst + rest + " ";
+  });
+
+        trimmedfullinput = fullinput.trim();
+        result = trimmedfullinput;
     }
 
     viewOutput();
