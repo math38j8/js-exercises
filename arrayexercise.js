@@ -22,7 +22,7 @@ let result;
 
 //result = people.push("Neville");        //Neville is added to the array
 
-//result = people.slice(0,3);              //There is now two arrays – if it was (0,2) one would be the original one and the copy only with two index
+//result = people.slice(0,3);              //There is now a new array – if it was (0,2) it would be only with two first indexes
 
 //result = people.splice(1,0,"Cho");       //Adds Cho to the array at index 1 - creates an empty array
 
@@ -53,5 +53,5 @@ console.log(arr1);
 console.log(arr2);
 
 
-        //String to array: .split()
+        //String to array: .split()  /  array.from()
         //Array to string: .join()
