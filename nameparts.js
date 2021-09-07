@@ -18,22 +18,36 @@
 // console.log(lastName);
 
 
-getNameParts("Mathilde Sahlholdt Christensen");
+//PARAMETERS
+//_________________________________________________________
+// getNameParts("Mathilde Sahlholdt Christensen");
 
-function getNameParts(fullname) {
-    let firstNameString = fullname.indexOf(" ");
-    let lastNameString = fullname.lastIndexOf(" ");
-    console.log(firstNameString);
-    console.log(lastNameString);
+// function getNameParts(fullname) {
+//     let firstNameString = fullname.indexOf(" ");
+//     let lastNameString = fullname.lastIndexOf(" ");
+//     console.log(firstNameString);
+//     console.log(lastNameString);
 
-    let firstName = fullname.substring(0,firstNameString);
-    console.log(firstName);
+//     let firstName = fullname.substring(0,firstNameString);
+//     console.log(firstName);
     
-    let middleName = fullname.substring(firstNameString+1,lastNameString);
-    console.log(middleName);
+//     let middleName = fullname.substring(firstNameString+1,lastNameString);
+//     console.log(middleName);
    
-    let lastName = fullname.substring(lastNameString+1);
-    console.log(lastName);
+//     let lastName = fullname.substring(lastNameString+1);
+//     console.log(lastName);
 
-    console.log( { firstName, middleName, lastName } );
-}
+//     console.log( { firstName, middleName, lastName } );
+// }
+
+
+
+//FULL NAME FUNCTION
+//_________________________________________________________
+
+
+fullName("Potter", "Harry");
+
+function fullName(lastName, firstName, middleName) {
+    console.log(`${firstName} ${middleName} ${lastName}`);
+};
